@@ -4,26 +4,25 @@
             display: flex;
             flex-direction: column;
             justify-content: left;
-            background-color: $dark-grey;
+            background-color: ($dark-grey);
+        /***POURQUOI LE BLANC N'EST IL PAS APPLIQUÉ ?****/
+            color: white;
+          
 
-                    &__titre{ font-family:'Shrikhand',sans-serif;
-                 color: white;}
+                &__titre{ 
+                font-family:'Shrikhand',sans-serif;
+                color:white;}
+
+  /***POURQUOI est il appliqué ici ?****/
+
+                 &__liste {                        
+                  list-style: none;
+                color: white;
+                font-family: "Roboto", sans-serif;
+                                &__li{
+                                color: white;
+                                }
+               }
                     }
-                    
-                 .footer {
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: left;
-                  background-color: $dark-grey;
-                        &__liste {
-                           color: white;
-                           list-style: none;
-                           font-style: 'roboto', sans-serif;
-                        &__item {
-                           color: white;
-                           font-style: 'roboto', sans-serif;
-                           
-                        }  
-                        }
+         
                 
-                }

@@ -8,22 +8,32 @@
         text-align: center;
     }
 }
-.header {
-    margin: 0;
-
-    
-    &__navigation{display: flex;
+.navigation{display: flex;
         justify-content: center;
-        background-color:var( --bg-light);
+        background-color: ($medium-grey);
         border-top: 4px solid ($dark-grey);
         border-bottom: 4px solid ($dark-grey);
             &__searchBar{
                 display: flex;
                 flex-direction: row;
+                align-items: center;
+                &__recherche{
+                     position: relative;
+                    border-style: none;
+                    height: 50px;
+                    border-top: 1px solid #F2F2F2;
+                    border-bottom: 1px solid #F2F2F2;
+                    font-size: larger;
+                    font-weight: bold;
+                    color: black;
+                    text-align: center;
+                    background-color: ($medium-grey);
+                 
+                }
             }
     }
             
             
        
     
-}
+

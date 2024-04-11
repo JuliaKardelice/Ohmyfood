@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/sass index/index.css" rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,12 +30,11 @@
 
 <h1 class="header__maintitle">Ohmyfood</h1>
 
-<nav class="header__navigation"> 
-    <form class="header__navigation__searchBar">
-        <form class="header__navigation__searchBar">
-            <div class="header__navigation__searchBar__icon"> <i class="fa-solid fa-location-dot"></i></div>
-            <input type="search" class="navigation__searchBar__recherche" id="site-search" name="q" placeholder="Paris, Belleville"/>
-        </form>
+<nav class="navigation"> 
+    <form class="navigation__searchBar">
+       
+            <div class="navigation__searchBar__icon"> <i class="fa-solid fa-location-dot"></i></div>
+            <input class="navigation__searchBar__recherche" type="search"  id="site-search" name="q" placeholder="Paris, Belleville"/>
     </form>
 </nav>
 </header>
@@ -47,17 +46,17 @@
 <section class="reservation">
   <h2 class="reservation__title">Réservez le menu qui vous convient</h2>
   <p class="reservation__txt"> Découvrez des restaurants d'exception sélectionnés par nos soins</p>
-    <button class="reservation__btn">Explorer nos restaurants</button>
+  <button class="reservation__btn">Explorer nos restaurants</button> 
 
 </section>
 <section class="fonctionnement">
     <h2 class="fonctionnement__titre"> Fonctionnement</h2>
 
-    <ol class="fonctionnement__liste">  
-        <li class="liste__item"> <a href="#"> Obtenir une reservation</a></li>
-    
-        <li class="liste__item"><p class="list__item__btn"><i class="fa-solid fa-list"></i>  </p></li> 
-        <li class="liste__item"><button class="list__item__btn"><i class="fa-solid fa-store"></i>Dégustez au restaurant</button></li> 
+    <ol class="liste">  
+        <li class="liste__item"> <a href="#">  <button class="fonctionnement__liste__nbr__btn"> <i class="fa-solid fa-mobile-screen-button"></i>Obtenir une reservation</button></a></li>
+        <li class="liste__item"> <a href="#"> <button><i class="fa-solid fa-list"></i> Composez votre menu </button></a></li> 
+        <li class="liste__item"><a href="#"> <button><i class="fa-solid fa-store"></i>Dégustez au restaurant</button></a></li> 
+      
 </ol>  
 
 
@@ -146,12 +145,10 @@
     <h2 class="footer__titre"> Ohmyfood</h2>
 <ul class="footer__liste">
 
-    <li class="footer__liste__item"> <i class="fa-solid fa-utensils"></i>
-        Proposer un restaurant</li>
-    <li  class="footer__liste__item"> <i class="fa-regular fa-handshake"></i>
-        Devenir partenaire</li>
-    <li  class="footer__liste__item"> Mentions légales </li>
-    <li  class="footer__liste__item"> Contact</li>
+    <li> <i class="fa-solid fa-utensils"></i> Proposer un restaurant </li>
+    <li> <i class="fa-regular fa-handshake "></i> Devenir partenaire</li>
+    <li> Mentions légales </li>
+    <li> Contact</li>
 
 </ul>
 
