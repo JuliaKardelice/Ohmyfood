@@ -1,0 +1,154 @@
+/*FOOTER*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: #353535;
+}
+.footer__titre {
+  font-family: "Shrikhand", sans-serif;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: #353535;
+}
+.footer__liste {
+  color: white;
+  list-style: none;
+  font-style: "roboto", sans-serif;
+}
+.footer__liste__item {
+  color: white;
+  font-style: "roboto", sans-serif;
+}
+
+.header {
+  margin: 0;
+}
+.header__maintitle {
+  font-family: "Shrikhand", sans-serif;
+  text-align: center;
+}
+
+.header {
+  margin: 0;
+}
+.header__navigation {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-light);
+  border-top: 4px solid #353535;
+  border-bottom: 4px solid #353535;
+}
+.header__navigation__searchBar {
+  display: flex;
+  flex-direction: row;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.reservation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.reservation__title {
+  font-weight: bolder;
+}
+.reservation__txt {
+  font-weight: lighter;
+}
+.reservation__btn {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  border-radius: 90px;
+  border: solid;
+  box-shadow: 4px 4px 4px #EAEAEA;
+  width: 240px;
+  height: 110px;
+  font-size: 20px;
+  font-weight: 800;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+
+/*Fonctionnement*/
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+}
+.fonctionnement__titre {
+  font-style: "roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 23px;
+}
+.fonctionnement__liste {
+  list-style: decimal;
+  background-color: #EAEAEA;
+}
+
+/*Fonctionnement liste */
+.fonctionnement .liste {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+}
+
+/*RESTAURANT*/
+.restaurants {
+  width: 100%;
+  margin-left: 60px;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F6F6F6;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  width: 50%;
+  border: solid transparent;
+  border-radius: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px;
+}
+.card__img {
+  height: 60%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 231px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card__content {
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.card__content__txt {
+  flex-direction: column;
+  display: flex;
+  width: 70%;
+}/*# sourceMappingURL=index.css.map */

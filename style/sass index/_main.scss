@@ -1,0 +1,120 @@
+
+* {
+    font-family: "Roboto", sans-serif;
+    color: black;
+text-decoration: none;}
+
+
+.reservation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+        &__title{
+            font-weight: bolder;
+        }
+        &__txt{
+            font-weight: lighter;
+        }
+        &__btn{    
+            
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    color:white;
+    border-radius: 90px;
+    border: solid;
+    box-shadow: 4px 4px 4px ($medium-grey);
+width: 240px;
+height: 110px;
+            
+            font-size: 20px;
+            font-weight: 800;
+       
+
+   
+        background:linear-gradient(180deg,#FF79DA,#9356DC)
+      
+        }
+}
+/*Fonctionnement*/
+.fonctionnement{  display: flex;
+    flex-direction: column;
+    height: 400px;
+width: 100%;
+        &__titre{
+            font-style: 'roboto', sans-serif;
+            font-weight: bolder;
+            font-size: 23px;
+        }
+        &__liste{
+            list-style: decimal;
+            background-color: ($medium-grey);
+        }
+}
+/*Fonctionnement liste */
+
+.fonctionnement .liste{  display: flex;
+    flex-direction: column;
+    height: 400px;
+width: 100%;
+
+
+
+
+ 
+}
+
+
+
+
+
+
+/*RESTAURANT*/
+
+.restaurants{
+
+    width: 100%;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: ($light-grey);
+    gap:20px;
+}
+
+
+.card {
+    background-color: white;
+    width:50%;
+    border: solid transparent;
+    border-radius: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+     margin: 30px;
+   
+   &__img{  height: 60%;
+    width: 100%;;
+     object-fit: cover;
+     height: 231px;
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
+ }
+   &__content{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+        &__txt{    flex-direction: column;
+            display:flex;
+        
+        
+            width: 70%;}
+   }
+}

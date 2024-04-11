@@ -1,0 +1,29 @@
+        /*FOOTER*/
+        
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            background-color: $dark-grey;
+
+                    &__titre{ font-family:'Shrikhand',sans-serif;
+                 color: white;}
+                    }
+                    
+                 .footer {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: left;
+                  background-color: $dark-grey;
+                        &__liste {
+                           color: white;
+                           list-style: none;
+                           font-style: 'roboto', sans-serif;
+                        &__item {
+                           color: white;
+                           font-style: 'roboto', sans-serif;
+                           
+                        }  
+                        }
+                
+                }

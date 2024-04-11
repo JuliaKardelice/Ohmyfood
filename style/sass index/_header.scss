@@ -1,0 +1,29 @@
+
+
+.header {
+    
+    margin: 0;
+    &__maintitle{
+        font-family:'Shrikhand',sans-serif;
+        text-align: center;
+    }
+}
+.header {
+    margin: 0;
+
+    
+    &__navigation{display: flex;
+        justify-content: center;
+        background-color:var( --bg-light);
+        border-top: 4px solid ($dark-grey);
+        border-bottom: 4px solid ($dark-grey);
+            &__searchBar{
+                display: flex;
+                flex-direction: row;
+            }
+    }
+            
+            
+       
+    
+}
