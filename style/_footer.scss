@@ -1,0 +1,46 @@
+        /*FOOTER*/
+        
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            background-color: ($dark-grey);
+      
+            color: white;
+          
+
+                &__titre{ 
+                font-family:'Shrikhand',sans-serif;
+                color:white;}
+                 &__liste {                        
+                  list-style: none;
+                color: white;
+                font-family: "Roboto", sans-serif;
+                           
+               }
+        }
+     
+                  @media (min-width: 768px){
+                    .footer {
+                    
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: right;
+                    align-items: last baseline;
+                    gap:25px;
+
+                    &__titre{
+                        display: flex;
+                        padding-right: 15px;
+        
+                        font-size: 18px;
+
+                    }
+                    &__liste{
+                        display: flex;
+                        flex-direction: row;
+                        gap:20px;
+
+                    }
+                    }
+                }

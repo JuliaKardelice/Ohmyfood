@@ -1,0 +1,31 @@
+
+
+$light-grey:    #F6F6F6;
+$medium-grey:#EAEAEA;
+$dark-grey:#353535;
+$grey:#F6F6F6;
+$bg-grey:#F6F6F6;
+
+
+
+$primairy-purple: #9356DC;
+$pink:#FF79DA;
+$main-pink: #F2F2F2;
+$second-color: #DEEBFF;
+$soft-green:#99E2D0;
+$green:#3b8468;
+
+
+@mixin shadow{
+    box-shadow: 5px 5px 5px ($dark-grey)};
+@mixin more-shadow{
+    box-shadow: 9px 9px 9px($dark-grey)};
+
+@mixin button{
+    border: solid;
+    box-shadow: 10px 10px 10px ($dark-grey);    
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px ($dark-grey);
+    background-color: ($medium-grey);
+}
+

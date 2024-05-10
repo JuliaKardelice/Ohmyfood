@@ -1,18 +1,25 @@
 
 
 .header {
-    
+  
     margin: 0;
     &__maintitle{
         font-family:'Shrikhand',sans-serif;
         text-align: center;
+       
+
     }
 }
-.navigation{display: flex;
+
+/***   box-shadow: outset -4px 0px 17px 1px #353535;****/
+.navigation{
+        display: flex;
         justify-content: center;
         background-color: ($medium-grey);
-        border-top: 4px solid ($dark-grey);
-        border-bottom: 4px solid ($dark-grey);
+        box-shadow:  -4px 0px 7px ($dark-grey) ;
+        width: 100%;
+        margin-bottom: 7px;
+
             &__searchBar{
                 display: flex;
                 flex-direction: row;
@@ -21,8 +28,7 @@
                      position: relative;
                     border-style: none;
                     height: 50px;
-                    border-top: 1px solid #F2F2F2;
-                    border-bottom: 1px solid #F2F2F2;
+          
                     font-size: larger;
                     font-weight: bold;
                     color: black;

@@ -9,18 +9,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/sass index/index.css" rel="stylesheet" >
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">  
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" >
-
+<link href="style/main.css" rel="stylesheet">
 
 </head>
 
@@ -42,7 +42,6 @@
 
 <main>
 
-
 <section class="reservation">
   <h2 class="reservation__title">Réservez le menu qui vous convient</h2>
   <p class="reservation__txt"> Découvrez des restaurants d'exception sélectionnés par nos soins</p>
@@ -53,87 +52,106 @@
     <h2 class="fonctionnement__titre"> Fonctionnement</h2>
 
     <ol class="liste">  
-        <li class="liste__item"> <a href="#">  <button class="fonctionnement__liste__nbr__btn"> <i class="fa-solid fa-mobile-screen-button"></i>Obtenir une reservation</button></a></li>
-        <li class="liste__item"> <a href="#"> <button><i class="fa-solid fa-list"></i> Composez votre menu </button></a></li> 
-        <li class="liste__item"><a href="#"> <button><i class="fa-solid fa-store"></i>Dégustez au restaurant</button></a></li> 
-      
-</ol>  
-
-
+        <li class="liste__item">
+                <button class="btn" type="button">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                Choisissez un restaurant
+            </button>
+        </li>
+        <li class="liste__item">
+            <button class="btn" type="button">
+                <i class="fa-solid fa-list"></i>
+                Composer votre menu
+            </button>
+        </li>
+        <li class="liste__item">
+            <button class="btn" type="button">
+                <i class="fa-solid fa-shop"></i>
+                Obtenir une reservation
+            </button>
+        </li>
+    </ol>
 </section>
-
-
 <section class="restaurants">
-<h2 class="restaurants__titre"> Restaurants </h2>
-
-<!--RESTO-->
-<a href="#">
-    <article class="card">
-        <img class="card__img"src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un menu">
-        <div class="card__content">
-            <div class="card__content__txt">
-                <h3>La note enchantée</h3>
-                <p> Charonne </p>
-            </div>
-            <div class="card__content__icon">
-                    <i class="fa-solid fa-heart"></i>
+    <h2 class="restaurants__titre">Restaurants</h2>
+    <div class="restaurants__cartes">
+    <!--RESTO-->  
+     <a href="#">
+        <article class="card">
+            <div class="new"> Nouveau </div>
+            <img class="card__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un menu">
+            <div class="card__content">
+                <div class="card__content__txt">
+                    <h3>La palette du goût</h3>
+                    <p>Charonne</p>
                 </div>
-        </div>
-        
-    </article>
-</a>
-
-<!--RESTO-->
-<a href="#">
-    <article class="card">
-        <img class="card__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un menu">
-        <div class="card__content">
-            <div class="card__content__txt">
-                <h3>La note enchantée</h3>
-                <p> Charonne </p>
-            </div>
-            <div class="card__content__icon">
+                <div class="card__content__icon">
                     <i class="fa-solid fa-heart"></i>
-                </div>
-        </div>
-        
-    </article>
-</a>
-
-
-<!--RESTO-->
-<a href="#">
-    <article class="card">
-        <img  class="card__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un menu">
-        <div class="card__content">
-            <div class="card__content__txt">
-                <h3>La note enchantée</h3>
-                <p> Charonne </p>
+   
+                    </div>
             </div>
-            <div class="card__content__icon">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-        </div>
-        
-    </article>
-</a>
+            
+        </article>
+    </a>
 
-<!--RESTO-->
-<a href="#">
-    <article class="card">
-        <img class="card__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un menu">
-        <div class="card__content">
-            <div class="card__content__txt">
-                <h3>La note enchantée</h3>
-                <p> Charonne </p>
-            </div>
-            <div class="card__content__icon">
-                    <i class="fa-solid fa-heart"></i>
+    <a href="./menus/menu_1.html" target="_blank">
+        <article class="card">
+            <img class="card__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un menu">
+            <div class="card__content">
+                <div class="card__content__txt">
+                    <h3> La note enchantée </h3>
+                    <p>Ménilmontant</p>
                 </div>
-        </div>
-        
-    </article>
-</a>
+                <div class="card__content__icon">
+                    <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="card__content__icon">
+                        <i class="fa-solid fa-heart"></i>
+                        </div>
+            </div>
+            
+        </article>
+    </a>
+
+    <!--RESTO-->
+ 
+    <!--RESTO-->
+    <a href="#">
+        <article class="card">
+            <img  class="card__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un menu">
+            <div class="card__content">
+                <div class="card__content__txt">
+                    <h3>À la française</h3>
+                    <p> Cité Rouge</p>
+                </div>
+                <div class="card__content__icon">
+                    <i class="fa-solid fa-heart"></i>
+                 <!--- class="fa-regular fa-heart"---->  
+                    </div>
+            </div>
+            
+        </article>
+    </a>
+
+    <!--RESTO-->
+    <a href="#">
+        <article class="card">
+            <img class="card__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'un menu">
+            <div class="card__content">
+                <div class="card__content__txt">
+                    <h3>Le délice des sens </h3>
+                    <p> Folie-Méricourt </p>
+                </div>
+                <div class="card__content__icon">
+                    <i class="fa-solid fa-heart"></i>
+           
+                    </div>
+            </div>
+            
+        </article>
+    </a>
+
+    </div>
 </section>
 
 
@@ -145,7 +163,9 @@
     <h2 class="footer__titre"> Ohmyfood</h2>
 <ul class="footer__liste">
 
-    <li> <i class="fa-solid fa-utensils"></i> Proposer un restaurant </li>
+    <li>
+        <a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a>
+    </li>
     <li> <i class="fa-regular fa-handshake "></i> Devenir partenaire</li>
     <li> Mentions légales </li>
     <li> Contact</li>
@@ -157,3 +177,9 @@
 
 
 </body>
+
+
+
+
+<!---------LODAR 
+    oh my food avec cercle et fleche qui tourne----------->

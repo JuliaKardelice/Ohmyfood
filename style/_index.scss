@@ -1,0 +1,210 @@
+
+* {
+    font-family: "Roboto", sans-serif;
+    color: inherit;
+text-decoration: none;}
+
+
+.reservation {
+    background-color: $light-grey;
+    text-align: center;
+    padding: 50px;
+        &__title{
+            font-weight: bolder;
+            padding: 0px 50px 0px 50px;
+        }
+        &__txt{
+    
+            font-size: 18px;
+            font-weight: lighter;
+            padding: 0px 20px 20px 20px;
+        }
+        &__btn{    
+            font-size: 20px;
+            color:white;
+            border: none;
+            border-radius: 90px;
+            background:linear-gradient(180deg,($pink),($primairy-purple));
+            padding: 15px 20px;
+            box-shadow: 5px 5px 5px ($dark-grey);    
+            @include shadow;
+            transition: 2s;
+           
+        }
+        &__btn:hover{
+       filter:brightness(50%M);
+       opacity: 0.7
+        
+
+        }
+}
+/*Fonctionnement*/
+.fonctionnement{
+    padding: 25px;
+    &__titre{
+        font-style: 'roboto', sans-serif;
+        font-weight: bolder;
+        font-size: 23px;
+    
+    }
+    .liste{
+        list-style-type: decimal;
+        padding-left: 0px;
+        &__item::before{
+            position: absolute;
+            left: -15px;
+            top: 15px;
+            background-color:($primairy-purple);
+            border-radius: 20px;
+            color: #fff;
+            content: counter(nbr); 
+        
+            padding: 5px 10px;  
+        }
+        &__item{
+            position: relative;
+            list-style-type: none;
+            counter-increment: nbr;
+         
+            &__button{
+                font-size: 18px;
+                background-color: #7b38d8;
+                border-radius: 10px;
+                border: solid;
+     
+            }   
+        }
+        button{  
+            width: 100%;
+            border: none;
+            border-radius: 30px;
+            background-color: #F6F6F6;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            margin-bottom: 10px;
+            padding: 25px;
+            font-size: 20px;
+        }
+           
+        }
+        .fonctionnement button{
+            width: 100%;
+            border: none;
+            border-radius: 30px;
+            background-color: #F6F6F6;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            margin-bottom: 10px;
+            padding: 25px;
+            font-size: 20px;
+            transition:3s;
+        }
+
+        ///probleme///
+        .fonctionnement:hover{
+
+                filter:brightness(50%M);
+                box-shadow: 5px 5px 5px black;    
+                background-color: #7b38d8;
+          
+            }
+        }
+        
+    
+
+
+
+/*RESTAURANT*/
+
+.restaurants{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+  
+    &__titre{
+        margin:30px;
+        font-size: 25px;
+        font-weight: 900;                    
+    }
+
+    &__cartes{
+        .new{
+            display: inline-block;
+            color:($green);
+            background-color: ($soft-green);
+            padding : 2px 5px 2px 5px;
+            z-index: 2;
+            position: absolute;
+            top:35px;
+            right: 35px;
+        }
+        .card {
+            position: relative;
+            background-color: white;
+            border-radius: 30px;
+            &__img{
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+            &__content{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                &__txt{
+                    flex-direction: column;
+                    display:flex;
+                    justify-content: left;
+                    width: 70%;
+                    &__h3{
+                        font-weight: 800;
+                        }
+                }
+            }
+            &__icon{
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+///
+///****///
+@media (min-width: 768px)  {
+
+   
+    .fonctionnement{
+        padding: 25px;
+     
+        &__titre{
+            font-style: 'roboto', sans-serif;
+            font-weight: bolder;
+            font-size: 23px;
+        
+        }
+        .liste{
+
+            list-style-type: decimal;
+            padding-left: 0px;
+            display: flex;
+            flex-direction: row;
+            &__item::before{
+                position: absolute;
+                left: -15px;
+                top: 15px;
+                background-color:($primairy-purple);
+                border-radius: 20px;
+                color: #fff;
+                content: counter(nbr); 
+            
+                padding: 5px 10px;  
+            }
+
+            }
+        }
+    
+    
+}
