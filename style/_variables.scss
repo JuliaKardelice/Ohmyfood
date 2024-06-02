@@ -5,7 +5,48 @@ $dark-grey:#353535;
 $grey:#F6F6F6;
 $bg-grey:#F6F6F6;
 
-
+#article_1, #article_4, #article_7 {
+    animation: apparition 600ms ease-in;
+  }
+  
+  #article_2, #article_5, #article_8 {
+    animation: apparition 1.2s ease-in;
+  }
+  
+  #article_3, #article_6, #article_9 {
+    animation: apparition 1.8s ease-in;
+  }
+  
+  #article_10 {
+    animation: apparition 2.4s ease-in;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes effet-opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes apparition {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }/*# sourceMappingURL=mixins.css.map */
 
 $primairy-purple: #9356DC;
 $pink:#FF79DA;
@@ -13,6 +54,19 @@ $main-pink: #F2F2F2;
 $second-color: #DEEBFF;
 $soft-green:#99E2D0;
 $green:#3b8468;
+$--primary: #9356dc;
+$--secondary: #ff79da;
+$--tertiary: #99e2d0;
+$--darkgray: darkgray;
+$--dimgray: dimgray;
+$--lightgray: lightgray;
+$--ultralightgray: #EAEAEA;
+$--graywhite: #F6F6F6;
+$--lightpurple: #F5EDFF;
+$--lightgreen: #99E2D0;
+$--green: #2FAF94;
+$--grayblack: #353535;
+
 
 
 
@@ -29,3 +83,7 @@ $green:#3b8468;
     background-color: ($medium-grey);
 }
 
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}

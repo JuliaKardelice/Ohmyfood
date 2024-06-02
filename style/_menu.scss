@@ -19,7 +19,7 @@
         }
 
 }
-
+@import "variables";
 ///coeur à revoir///
 
 .blackheart{
@@ -54,7 +54,6 @@ width: 100%;
 
         &__img{
 
-            width:100% ;
             height: auto;
             object-fit: cover;
 
@@ -71,7 +70,7 @@ width: 100%;
     background-color: ($grey);
 }
         .presentation{
-         
+        padding:20px;
         z-index: 2;
         position: relative;
         top:-80px;
@@ -80,7 +79,13 @@ width: 100%;
         border: none;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-    
+
+        max-width: 1058px;
+        margin: 0 auto;
+
+        position: relative;
+        top:-80px;
+
         }
 
 
@@ -116,29 +121,116 @@ width: 100%;
   
 }
 
-        .carde{
-
-        margin: 20px;
-        border: none;
-        background-color: white;
-        border-radius:30px;
-        padding: 10px 20px 10px 20px;
-        display: flex;   
-        justify-content: space-between;
-        box-shadow: 5px 5px 3px ($medium-grey);
-    
-     &__plat{
+        .plat{
         font-weight: bolder;
                         }
     
-       
-                &__description{
-                    display: flex;
-                     flex-direction: column;
-                    
-                }
- 
+  
+///MXIN TRANSITION ///
+/// 
+/// 
+/// @mixin article-menu {
+/// 
+/// DESCRIPTION MENU///
+.carde{
+
+
+
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 5px 5px 3px #EAEAEA;
+    &:hover .selectChoice{
+        margin: 0;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    .selectChoice {
+        @include flex-center;
+        background-color: $--lightgreen;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+        width: 50px;
+        margin-right: -60PX
+    }
+    &:hover .selectChoice i {
+        animation: spin 1s;
+    }
+
+    .description {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;              
+     
+        justify-content: space-between;
+      
+        padding: 0.5rem 0 0.5rem 1rem;
+        &:hover {
+            cursor: pointer;
+        
         }
+    }
+    .price {
+
+        display: flex;
+        align-items: center;
+        @include flex-center;
+        width: 30px;
+        font-weight: bold;
+        align-items: flex-end;
+        padding: 0 0.5rem 0.5rem 0;
+        border-radius: 0px 15px 15px 0px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+// la coche qui pivote sur 360°
+@keyframes spin {                       
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes effet-opacity {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+// animation des menus
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+   
+
+ 
+
     ///Pourquoi pas appliqué si imbriqué ?///
     .plat{
     font-weight: 900;

@@ -1,19 +1,66 @@
+#article_1, #article_4, #article_7 {
+  animation: apparition 600ms ease-in;
+}
+
+#article_2, #article_5, #article_8 {
+  animation: apparition 1.2s ease-in;
+}
+
+#article_3, #article_6, #article_9 {
+  animation: apparition 1.8s ease-in;
+}
+
+#article_10 {
+  animation: apparition 2.4s ease-in;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes effet-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
 .header {
+  position: relative;
+  z-index: 1;
   margin: 0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .header__maintitle {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 5px;
 }
 
 /***   box-shadow: outset -4px 0px 17px 1px #353535;****/
 .navigation {
+  position: relative;
   display: flex;
   justify-content: center;
   background-color: #EAEAEA;
-  box-shadow: -4px 0px 7px #353535;
   width: 100%;
-  margin-bottom: 7px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .navigation__searchBar {
   display: flex;
@@ -72,6 +119,10 @@
     gap: 20px;
   }
 }
+body {
+  margin: 0;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   color: inherit;
@@ -99,7 +150,7 @@
   border-radius: 90px;
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   padding: 15px 20px;
-  box-shadow: 5px 5px 5px #353535;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: 2s;
 }
 .reservation__btn:hover {
@@ -159,13 +210,11 @@
 }
 
 /*RESTAURANT*/
-v .restaurants {
+.restaurants {
+  padding: 25px;
   background-color: #F6F6F6;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
 }
-v .restaurants__titre {
+.restaurants__titre {
   margin: 30px;
   font-size: 25px;
   font-weight: 900;
@@ -183,9 +232,9 @@ v .restaurants__titre {
 }
 
 .card {
-  margin: 30px 30px 30px 30px;
   background-color: white;
   border-radius: 30px;
+  margin-bottom: 20px;
 }
 .card__img {
   z-index: 1;
@@ -236,7 +285,7 @@ v .restaurants__titre {
 
 @media (min-width: 768px) {
   .fonctionnement {
-    padding: 25px;
+    padding: 50px;
   }
   .fonctionnement__titre {
     font-style: "roboto", sans-serif;
@@ -244,10 +293,8 @@ v .restaurants__titre {
     font-size: 23px;
   }
   .fonctionnement .liste {
-    list-style-type: decimal;
     padding-left: 0px;
     display: flex;
-    flex-direction: row;
   }
   .fonctionnement .liste__item::before {
     position: absolute;
@@ -265,6 +312,7 @@ v .restaurants__titre {
     list-style-type: none;
     counter-increment: nbr;
     gap: 15px;
+    width: 33%;
   }
   .fonctionnement .liste button {
     width: 100%;
@@ -278,7 +326,7 @@ v .restaurants__titre {
   }
   .restaurants {
     background-color: #F6F6F6;
-    padding: 80px 40px 20px 80px;
+    padding: 50px;
   }
   .restaurants__titre {
     text-align: left;
@@ -314,6 +362,48 @@ v .restaurants__titre {
   font-weight: 900;
 }
 
+#article_1, #article_4, #article_7 {
+  animation: apparition 600ms ease-in;
+}
+
+#article_2, #article_5, #article_8 {
+  animation: apparition 1.2s ease-in;
+}
+
+#article_3, #article_6, #article_9 {
+  animation: apparition 1.8s ease-in;
+}
+
+#article_10 {
+  animation: apparition 2.4s ease-in;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes effet-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
 .blackheart {
   font-size: 20px;
   position: absolute;
@@ -341,7 +431,6 @@ v .restaurants__titre {
   width: 100%;
 }
 .window__img {
-  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -353,6 +442,7 @@ v .restaurants__titre {
 }
 
 .presentation {
+  padding: 20px;
   z-index: 2;
   position: relative;
   top: -80px;
@@ -361,6 +451,10 @@ v .restaurants__titre {
   border: none;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  max-width: 1058px;
+  margin: 0 auto;
+  position: relative;
+  top: -80px;
 }
 
 .title {
@@ -387,24 +481,94 @@ v .restaurants__titre {
   border-bottom: solid 2px #99E2D0;
 }
 
-.carde {
-  margin: 20px;
-  border: none;
-  background-color: white;
-  border-radius: 30px;
-  padding: 10px 20px 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 5px 5px 3px #EAEAEA;
-}
-.carde__plat {
+.plat {
   font-weight: bolder;
 }
-.carde__description {
+
+.carde {
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 5px 5px 3px #EAEAEA;
+}
+.carde:hover .selectChoice {
+  margin: 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.carde .selectChoice {
+  display: flex;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: center;
+  border-radius: 0px 15px 15px 0px;
+  width: 50px;
+  margin-right: -60PX;
+}
+.carde:hover .selectChoice i {
+  animation: spin 1s;
+}
+.carde .description {
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+.carde .description:hover {
+  cursor: pointer;
+}
+.carde .price {
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  font-weight: bold;
+  align-items: flex-end;
+  padding: 0 0.5rem 0.5rem 0;
+  border-radius: 0px 15px 15px 0px;
+}
+.carde .price:hover {
+  cursor: pointer;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes effet-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .plat {
   font-weight: 900;
 }

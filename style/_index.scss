@@ -1,5 +1,6 @@
-
-
+body{
+    margin: 0;
+}
 
 * {
     font-family: "Roboto", sans-serif;
@@ -28,7 +29,7 @@
             border-radius: 90px;
             background:linear-gradient(180deg,($pink),($primairy-purple));
             padding: 15px 20px;
-            @include shadow;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
             transition: 2s;
         }
         &__btn:hover{
@@ -100,16 +101,11 @@
 }
 
 
-/*RESTAURANT*/v
+/*RESTAURANT*/
 
 .restaurants{
+    padding: 25px;
     background-color: ($light-grey);
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-
-  
     &__titre{
         margin:30px;
         font-size: 25px;
@@ -118,23 +114,21 @@
 }
 
 .new{
-display: inline-block;
-color:($green);
-background-color: ($soft-green);
-padding : 2px 5px 2px 5px;
-z-index: 2;
-position: relative;
-top:35px;
-left:80%;
-
+    display: inline-block;
+    color:($green);
+    background-color: ($soft-green);
+    padding : 2px 5px 2px 5px;
+    z-index: 2;
+    position: relative;
+    top:35px;
+    left:80%;
 }
 
 .card {
-        margin:30px 30px 30px 30px;
-        background-color:white;
-        border-radius: 30px;
-   
-   &__img{  
+    background-color:white;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    &__img{  
 
         z-index: 1;
         height: 60%;
@@ -209,7 +203,7 @@ opacity: 1;
 
    
     .fonctionnement{
-        padding: 25px;
+        padding: 50px;
        
         &__titre{
             font-style: 'roboto', sans-serif;
@@ -220,12 +214,8 @@ opacity: 1;
 
 
         .liste{
-
-            list-style-type: decimal;
             padding-left: 0px;
             display: flex;
-            flex-direction: row;
-
             &__item::before{
                 position: absolute;
                 left: -15px;
@@ -241,10 +231,9 @@ opacity: 1;
                 position: relative;
                 list-style-type: none;
                 counter-increment: nbr;
-                gap:15px;
-             
-                           
-                        }
+                gap:15px; 
+                width: 33%;
+                }
             
                   
 
@@ -268,7 +257,7 @@ opacity: 1;
     
     .restaurants{
         background-color: ($light-grey);
-        padding:80px 40px 20px 80px;
+        padding:50px;
         &__titre{
         text-align: left;
         display: flex;
