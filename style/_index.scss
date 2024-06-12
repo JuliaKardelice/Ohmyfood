@@ -7,6 +7,80 @@ body{
     color: inherit;
     text-decoration: none;}
 
+.loader {
+position:fixed;
+height: 100%;
+width: 100%;
+background-color:$loadone;
+animation : loading 3s;
+z-index: 10;
+opacity: 0;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+@keyframes loading{
+0% {opacity: 1;
+    background-color:$loadone;
+}
+
+95%{
+    background-color:$loadone;
+opacity: 1;
+}
+
+100%{ opacity: 0;
+    background-color:$loadtwo;
+
+}
+}
+
+
+.brand{
+position: relative;
+
+font-family:'Shrikhand',sans-serif;
+font-size: 60px;
+
+animation: effectload 3s;
+
+}
+.o{
+    color: $pink;
+    font-family:'Shrikhand',sans-serif;
+}
+
+.m{
+    color: $soft-green; 
+    font-family:'Shrikhand',sans-serif;  
+    }
+.f{
+    color: $primairy-purple;   
+    font-family:'Shrikhand',sans-serif; 
+    }
+
+@keyframes effectload {
+
+0%{
+scale: 1
+
+}    
+
+50%{
+scale: 1.5;
+rotate: 0deg;
+
+}
+
+100%{
+scale:0.8;
+rotate: 360deg;
+
+}
+
+}
 
 .reservation {
     background-color: $light-grey;

@@ -120,134 +120,82 @@ width: 100%;
     border-bottom:solid 2px ($soft-green);
   
 }
-.entree{
-animation: fadeone 4s;
-padding-right: 20px;
-}
 
+        .plat{
+        font-weight: bolder;
+                        }
+    
   
-///Apparition menu///
-@keyframes fadeone {
-    0% {
-        opacity:0;
-    }
-   100%{
-        opacity:1;
-    }
-}
-
-
-.plat{
-animation: fadetwo 4S;
-
-}
-
-@keyframes fadetwo {
-    0% {
-        opacity:0;
-    }
-
-    20%{
-        opacity: 0;
-    }
-   100%{
-        opacity:1;
-    }
-}
-
-
-
-.desserts{
-animation: fadethree 4s;
-}
-
-@keyframes fadethree {
-    0% {
-        opacity:0;
-    }
-
-    40%{
-        opacity: 0;
-    }
-   100%{
-        opacity:1;
-    }
-}
-
-
+///MXIN TRANSITION ///
+/// 
+/// 
+/// @mixin article-menu {
+/// 
 /// DESCRIPTION MENU///
 .carde{
 
 
-    width: 100%;
-    height: 70px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px 0px 0px 0px;
+
     background-color: white;
-  
- 
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px;
     box-shadow: 5px 5px 3px #EAEAEA;
-    &:hover .choice{
-        position: relative;
-        right: 70px;
+    &:hover .selectChoice{
+        margin: 0;
         transition: all 0.5s;
         cursor: pointer;
     }
+    .selectChoice {
+        @include flex-center;
+        background-color: $--lightgreen;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        align-items: center;
+        border-radius: 0px 15px 15px 0px;
+        width: 50px;
+        margin-right: -60PX
+    }
+    &:hover .selectChoice i {
+        animation: spin 1s;
+    }
 
-    .choice {
-       position: relative;
-     border-radius: 20px;
-display: flex;
-flex-direction: row;
-        width: 70px;
-        height: 100%;
-        right: 0px;
+    .description {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;              
      
-
-   
-        }
-.price{
-color: black;
-font-weight: bold;
-font-size: 15px;
-padding: 10px;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: last baseline;
-}
-.fa-solid, .fas {
-    border-radius: 0px 20px 20px 0px;
-    color: white;
-    border: solid;
-    background-color:$soft-green;
-    
-    padding: 20px;
-  }
- .description {
-
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-   
-    
+        justify-content: space-between;
+      
+        padding: 0.5rem 0 0.5rem 1rem;
         &:hover {
             cursor: pointer;
         
         }
     }
+    .price {
+
+        display: flex;
+        align-items: center;
+        @include flex-center;
+        width: 30px;
+        font-weight: bold;
+        align-items: flex-end;
+        padding: 0 0.5rem 0.5rem 0;
+        border-radius: 0px 15px 15px 0px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
 }
-
-.food{
-font-weight: bolder;
-}
-
-
 
 @mixin flex-center {
     display: flex;
@@ -284,6 +232,9 @@ font-weight: bolder;
  
 
     ///Pourquoi pas appliqué si imbriqué ?///
+    .plat{
+    font-weight: 900;
+    }
 
 
 
@@ -337,8 +288,6 @@ font-weight: bolder;
         
                 }
         }
-
-
 
     }
 

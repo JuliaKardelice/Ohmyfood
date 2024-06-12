@@ -1,0 +1,34 @@
+.presentation .entree{
+    animation: fadeone 4s;
+    }
+    
+      
+    ///Apparition menu///
+    @keyframes fadeone {
+        0% {
+            opacity:0;
+        }
+       100%{
+            opacity:1;
+        }
+    }
+    
+    
+    
+    .desserts{
+    animation: fadethree 4s;
+    }
+    
+    @keyframes fadethree {
+        0% {
+            opacity:0;
+        }
+    
+        40%{
+            opacity: 0;
+        }
+       100%{
+            opacity:1;
+        }
+    }
+    
