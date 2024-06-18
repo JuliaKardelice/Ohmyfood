@@ -29,7 +29,12 @@
         opacity: 1;
         border: none;
         background-color: transparent;
+        transition: 1s;
         }
+
+        .blackheart:focus{
+            opacity: 0;
+         }
 .pinkheart {
 
         background:linear-gradient(180deg,($pink),($primairy-purple));
@@ -40,6 +45,7 @@
         border: none;
         font-size: 20px;
         opacity: 0;
+        transition: 1s;
         
     }
  .pinkheart:focus{
@@ -50,14 +56,14 @@
 ////coeur///
 
 .window{
-width: 100%;
-
-        &__img{
-
-            height: auto;
-            object-fit: cover;
-
+    width: 100%;
+    img{
+        height: 280px;
+        object-fit: cover;
+        @media (min-width: 768px){
+            height: 380px;
         }
+    }
 }
 
 ///footer//
@@ -133,16 +139,11 @@ width: 100%;
 /// 
 /// DESCRIPTION MENU///
 .carde{
-
-
-
-    background-color: white;
+    cursor: pointer;
+    position: relative;
     border-radius: 30px;
     display: flex;
-    justify-content: space-between;
-    display: flex;
     background-color: white;
-    width: 100%;
     overflow: hidden;
     margin: 20px;
     box-shadow: 5px 5px 3px #EAEAEA;
@@ -151,50 +152,71 @@ width: 100%;
         transition: all 0.5s;
         cursor: pointer;
     }
+    h4, p {
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
     .selectChoice {
         @include flex-center;
-        background-color: $--lightgreen;
+        background-color: ($soft-green);
         color: white;
         font-weight: bold;
         font-size: 20px;
         align-items: center;
-        border-radius: 0px 15px 15px 0px;
         width: 50px;
-        margin-right: -60PX
+        position: absolute;
+        right: -50px;
+        height: 100%;
     }
     &:hover .selectChoice i {
         animation: spin 1s;
     }
 
     .description {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;              
-     
-        justify-content: space-between;
-      
+        flex: 1;
         padding: 0.5rem 0 0.5rem 1rem;
         &:hover {
             cursor: pointer;
-        
         }
     }
     .price {
-
-        display: flex;
-        align-items: center;
-        @include flex-center;
-        width: 30px;
         font-weight: bold;
-        align-items: flex-end;
-        padding: 0 0.5rem 0.5rem 0;
-        border-radius: 0px 15px 15px 0px;
-        &:hover {
-            cursor: pointer;
+        padding: 45px 20px;
+        position: absolute;
+        right: 0;
+    }
+    &:hover{
+        h4, p {
+            width: 70%;
+        }
+        .selectChoice{
+            animation: check 1s;
+            animation-fill-mode: both;
+        }
+        .price{
+            animation: price 1s;
+            animation-fill-mode: both;
         }
     }
+}
 
+@keyframes check {
+    0%{
+        right: -50px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+@keyframes price{
+    0%{
+        margin-right: 0px;
+    }
+    100%{
+        margin-right: 50px;
+    }
 }
 
 @mixin flex-center {
@@ -217,25 +239,29 @@ width: 100%;
 @keyframes apparition {
     0% {
         opacity: 0;
-        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
+.entree, .plates, .desserts{
+    opacity: 0;
+    animation: apparition 1s;
+    animation-fill-mode: both;
+}
 
+.entree{
+    animation-delay: 0.5s;
+}
 
-   
+.plats{
+    animation-delay: 1s;
+}
 
- 
-
-    ///Pourquoi pas appliqué si imbriqué ?///
-    .plat{
-    font-weight: 900;
-    }
-
+.desserts{
+    animation-delay: 1.5s;
+}
 
 
     .commander{

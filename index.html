@@ -29,7 +29,12 @@
     <header class="header">
         <h1 class="header__maintitle">Ohmyfood</h1>
     </header>
+
+
     <section class="loader">
+        <div class="loadericon">
+            <i class="fa-solid fa-utensils"></i>
+        </div>
         <div class="brand">
         
             <span class="o">Oh</span>
@@ -90,8 +95,9 @@
         <h2 class="restaurants__titre"> Restaurants</h2>
         <div class="restaurants__cartes">
         <!--RESTO-->
-        <a href="./menus/note_enchantee.html" target="_blank">
-            <article class="card">
+        <a href="./menus/palette_gout.html">
+            <article class="card">  
+                    <span class="new"> Nouveau </span>
                 <img class="card__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un menu">
                 <div class="card__content">
                     <div class="card__content__txt">
@@ -99,9 +105,9 @@
                         <p>Ménilmontant</p>
                     </div>
                     <div class="card__content__icon">
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-heart"></i>
-                        </div>
+                        <button class="blackheart"><i class="fa-regular fa-heart"></i> </button>
+                        <button class="pinkheart"> <i class="fa-solid fa-heart"></i> </button>
+                    </div>
                 </div>
                 
             </article>
@@ -109,34 +115,40 @@
     
         <!--RESTO-->
         <a href="./menus/note_enchantee.html">
-            <article class="card">
+             <article class="card">  
+                    <span class="new"> Nouveau </span>
                 <img class="card__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un menu">
-                <div class="card__content">
+             <div class="card__content">
                     <div class="card__content__txt">
-                        <h3> La note enchantée </h3>
-                        <p>Charonne</p>
+                    <h3>La note enchantée </h3>
+                    <p> Charonne</p>
                     </div>
-                    <div class="card__content__icon">
-                        <i class="fa-solid fa-heart"></i>
-                          <i class="fa-regular fa-heart"></i> 
-                        </div>
+             <div class="card__content__icon">
+                        <button class="blackheart"><i class="fa-regular fa-heart"></i> </button>
+                        <button class="pinkheart"> <i class="fa-solid fa-heart"></i> </button>
+                    </div>       
                 </div>
                 
             </article>
         </a>
     
         <!--RESTO-->
-        <a href="#">
+        <a href="menus/a_la_francaise.html">
             <article class="card">
+                <div class="card__window">
+                <span class="card__nouveau">Nouveau</span>
                 <img  class="card__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un menu">
+                </div>
                 <div class="card__content">
                     <div class="card__content__txt">
                         <h3>À la française</h3>
                         <p> Cité Rouge</p>
                     </div>
                     <div class="card__content__icon">
-                       <i class="fa-regular fa-heart"></i>
-                        </div>
+                        <button class="blackheart"><i class="fa-regular fa-heart"></i> </button>
+                        <button class="pinkheart"> <i class="fa-solid fa-heart"></i> </button>
+                    </div>
+                        
                 </div>
                 
             </article>
@@ -144,7 +156,7 @@
     
         
         <!--RESTO-->
-        <a href="#">
+        <a href="menus/delices_sens.html">
             <article class="card">
                 <img class="card__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'un menu">
                 <div class="card__content">
@@ -153,8 +165,9 @@
                         <p> Folie-Méricourt </p>
                     </div>
                     <div class="card__content__icon">
-                        <i class="fa-regular fa-heart"></i>
-                        </div>
+                        <button class="blackheart"><i class="fa-regular fa-heart"></i> </button>
+                        <button class="pinkheart"> <i class="fa-solid fa-heart"></i> </button>
+                    </div>
                 </div>
                 
             </article>
@@ -172,12 +185,12 @@
         <h2 class="footer__titre"> Ohmyfood</h2>
     <ul class="footer__liste">
     
-        <li>
+        <li class="l1">
             <a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a>
         </li>
-        <li> <i class="fa-regular fa-handshake "></i> Devenir partenaire</li>
-        <li> Mentions légales </li>
-        <li> Contact</li>
+        <li class="l2"> <i class="fa-regular fa-handshake "></i> Devenir partenaire</li>
+        <li class="l3"> Mentions légales </li>
+        <li class="l4">Contact</li>
     
     </ul>
     
