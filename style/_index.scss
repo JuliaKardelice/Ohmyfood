@@ -51,6 +51,7 @@ body{
     .liste{
         list-style-type: decimal;
         padding-left: 0px;
+        
         &__item::before{
             position: absolute;
             left: -15px;
@@ -64,6 +65,7 @@ body{
         } 
     
         &__item{
+            padding: 8px 0px 10px 0px;
             position: relative;
             list-style-type: none;
             counter-increment: nbr;
@@ -82,14 +84,16 @@ body{
             width: 100%;
             border: none;
             border-radius: 30px;
-            background-color: #F6F6F6;
+            background-color: ($light-grey);
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             margin-bottom: 10px;
             padding: 25px;
             font-size: 20px;
             transition:  1s;
             transition-property: calc(background-color);
-          
+                i{
+                padding: 5px;
+                }
                  
         }
                 button:hover{
@@ -120,17 +124,17 @@ body{
     background-color: ($soft-green);
     padding : 2px 5px 2px 5px;
     z-index: 2;
-    position: relative;
+    position: absolute;
     top:35px;
-    left:80%;
+    right: 35px;
 }
 
 
 
 .card {
+    position: relative;
     background-color:white;
     border-radius: 30px;
-    height: 251px;
     margin-bottom: 20px;
     &__img{  
         position: relative;
@@ -254,17 +258,20 @@ opacity: 1;
                 
                 width: 100%;
                 border: none;
-                border-radius: 30px;
-                background-color: #F6F6F6;
+                border-radius: 20px;
+                background-color: ($light-grey);
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 margin-bottom: 10px;
-                padding: 25px;
+                padding: 15px 40px 15px 40px;
                 font-size: 20px;
+                        i{
+                        padding: 5px;
+                        }
                     }
          
 
             }
-        }
+        
     
     .main {
     margin-bottom: 40px;
@@ -295,4 +302,6 @@ opacity: 1;
     }    
 }
 
+
+}
 

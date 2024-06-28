@@ -5,6 +5,7 @@
     z-index: 1;
     margin: 0;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+ 
     &__maintitle{
         font-family:'Shrikhand',sans-serif;
         text-align: center;
@@ -12,8 +13,17 @@
         padding: 5px;
     }
 }
+.header-resto{
+.return {
+    font-size: 20px;
+   .fa-solid, .fasi{
+    position: relative;
+    right: 15px;
+    bottom: 15px;
+   }
+}
+}
 
-/***   box-shadow: outset -4px 0px 17px 1px #353535;****/
 .navigation{
     position: relative;
         display: flex;
@@ -29,13 +39,15 @@
                      position: relative;
                     border-style: none;
                     height: 50px;
-          
+                  
                     font-size: larger;
                     font-weight: bold;
                     color: black;
                     text-align: center;
                     background-color: ($medium-grey);
-                 
+                    
                 }
-            }
+          
+            } 
+          
     }

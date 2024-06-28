@@ -53,7 +53,15 @@
   padding: 5px;
 }
 
-/***   box-shadow: outset -4px 0px 17px 1px #353535;****/
+.header-resto .return {
+  font-size: 20px;
+}
+.header-resto .return .fa-solid, .header-resto .return .fasi {
+  position: relative;
+  right: 15px;
+  bottom: 15px;
+}
+
 .navigation {
   position: relative;
   display: flex;
@@ -89,6 +97,7 @@
 .footer__titre {
   font-family: "Shrikhand", sans-serif;
   color: white;
+  padding-left: 40px;
 }
 .footer__liste {
   list-style: none;
@@ -98,13 +107,14 @@
 
 @media (min-width: 768px) {
   .footer {
+    margin: 0px;
     padding-bottom: 5px;
     height: 100px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: right;
     align-items: last baseline;
-    gap: 60px;
+    width: 100%;
   }
   .footer__titre {
     display: flex;
@@ -112,11 +122,14 @@
     align-items: center;
     justify-content: center;
     font-size: 22px;
+    padding: 20px 30px 20px 0px;
+    margin-left: 60px;
   }
   .footer__liste {
+    margin: 0px 20px 0px 20px;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
   }
 }
 body {
@@ -129,69 +142,6 @@ body {
   text-decoration: none;
 }
 
-.loader {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(249, 215, 237);
-  animation: loading 3s;
-  z-index: 10;
-  opacity: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes loading {
-  0% {
-    opacity: 1;
-    background-color: rgb(249, 215, 237);
-  }
-  95% {
-    background-color: rgb(249, 215, 237);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    background-color: #99E2D0;
-  }
-}
-.brand {
-  position: relative;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 60px;
-  animation: effectload 3s;
-}
-
-.o {
-  color: #FF79DA;
-  font-family: "Shrikhand", sans-serif;
-}
-
-.m {
-  color: #99E2D0;
-  font-family: "Shrikhand", sans-serif;
-}
-
-.f {
-  color: #9356DC;
-  font-family: "Shrikhand", sans-serif;
-}
-
-@keyframes effectload {
-  0% {
-    scale: 1;
-  }
-  50% {
-    scale: 1.5;
-    rotate: 0deg;
-  }
-  100% {
-    scale: 0.8;
-    rotate: 360deg;
-  }
-}
 .reservation {
   background-color: #F6F6F6;
   text-align: center;
@@ -246,6 +196,7 @@ body {
   padding: 5px 10px;
 }
 .fonctionnement .liste__item {
+  padding: 8px 0px 10px 0px;
   position: relative;
   list-style-type: none;
   counter-increment: nbr;
@@ -268,6 +219,9 @@ body {
   transition: 1s;
   transition-property: calc(background-color);
 }
+.fonctionnement .liste button i {
+  padding: 5px;
+}
 .fonctionnement .liste button:hover {
   background-color: rgba(146, 86, 220, 0.3725490196);
 }
@@ -284,24 +238,25 @@ body {
 }
 
 .new {
-  display: inline-block;
   color: #3b8468;
   background-color: #99E2D0;
   padding: 2px 5px 2px 5px;
   z-index: 2;
-  position: relative;
+  position: absolute;
   top: 35px;
-  left: 80%;
+  right: 35px;
 }
 
 .card {
+  position: relative;
   background-color: white;
   border-radius: 30px;
   margin-bottom: 20px;
 }
 .card__img {
+  position: relative;
   z-index: 1;
-  height: 60%;
+  height: 231px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -331,18 +286,29 @@ body {
   justify-content: center;
   align-items: center;
 }
-.card .fa-solid, .card .fas {
+.card .blackheart {
+  font-size: 20px;
+  position: absolute;
+  opacity: 1;
+  border: none;
+  background-color: transparent;
+  transition: 1s;
+}
+.card .blackheart:hover {
+  opacity: 0;
+}
+.card .pinkheart {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: static;
-  opacity: 0;
-}
-.card .fa-regular, .card .far {
-  font-size: 20px;
   position: absolute;
-  transition: 2s;
+  border: none;
+  font-size: 20px;
+  opacity: 0;
+  transition: 1s;
+}
+.card .pinkheart:hover {
   opacity: 1;
 }
 
@@ -380,28 +346,32 @@ body {
   .fonctionnement .liste button {
     width: 100%;
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: #F6F6F6;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: 10px;
-    padding: 25px;
+    padding: 15px 40px 15px 40px;
     font-size: 20px;
   }
-  .restaurants {
-    background-color: #F6F6F6;
-    padding: 50px;
+  .fonctionnement .liste button i {
+    padding: 5px;
   }
-  .restaurants__titre {
+  .fonctionnement .main {
+    margin-bottom: 40px;
+  }
+  .fonctionnement .restaurants {
+    padding: 50px;
+    background-color: #F6F6F6;
+  }
+  .fonctionnement .restaurants__titre {
     text-align: left;
     display: flex;
     justify-content: left;
   }
-  .restaurants__cartes {
+  .fonctionnement .restaurants__cartes {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
     gap: 60px;
-    flex-wrap: wrap;
     padding-bottom: 30px;
   }
 }
@@ -409,6 +379,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: inherit;
   text-decoration: none;
+}
+
+.main {
+  background-color: #F6F6F6;
 }
 
 .header-resto {
@@ -425,36 +399,76 @@ body {
   font-weight: 900;
 }
 
-.blackheart {
-  font-size: 20px;
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.entree, .plats, .desserts {
+  opacity: 0;
+  animation: apparition 1s;
+  animation-fill-mode: both;
+}
+
+.entree {
+  animation-delay: 0.5s;
+}
+
+.plats {
+  animation-delay: 1s;
+}
+
+.desserts {
+  animation-delay: 1.5s;
+}
+
+.heart {
+  font-size: 28px;
+  position: relative;
+  top: 30px;
+  padding-right: 50px;
+}
+.heart .blackheart {
+  font-size: inherit;
   position: absolute;
   opacity: 1;
   border: none;
   background-color: transparent;
+  transition: 1s;
 }
-
-.pinkheart {
+.heart .blackheart:focus {
+  opacity: 0;
+}
+.heart .pinkheart {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
   border: none;
-  font-size: 20px;
+  font-size: inherit;
   opacity: 0;
+  transition: 1s;
 }
-
-.pinkheart:focus {
+.heart .pinkheart:focus {
   opacity: 1;
 }
 
 .window {
   width: 100%;
 }
-.window__img {
-  height: auto;
+.window img {
+  height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 768px) {
+  .window img {
+    height: 380px;
+  }
 }
 
 .main {
@@ -481,8 +495,7 @@ body {
 .title {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .restoname {
@@ -507,21 +520,26 @@ body {
 }
 
 .carde {
-  background-color: white;
-  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 15px;
   display: flex;
-  justify-content: space-between;
-  display: flex;
   background-color: white;
-  width: 100%;
   overflow: hidden;
-  margin: 20px;
+  margin: 20px 0;
   box-shadow: 5px 5px 3px #EAEAEA;
 }
 .carde:hover .selectChoice {
   margin: 0;
   transition: all 0.5s;
   cursor: pointer;
+}
+.carde h4, .carde p {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .carde .selectChoice {
   display: flex;
@@ -531,39 +549,55 @@ body {
   font-weight: bold;
   font-size: 20px;
   align-items: center;
-  border-radius: 0px 15px 15px 0px;
   width: 50px;
-  margin-right: -60PX;
+  position: absolute;
+  right: -50px;
+  height: 100%;
 }
 .carde:hover .selectChoice i {
   animation: spin 1s;
 }
 .carde .description {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: space-between;
+  flex: 1;
   padding: 0.5rem 0 0.5rem 1rem;
 }
 .carde .description:hover {
   cursor: pointer;
 }
 .carde .price {
-  display: flex;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 30px;
   font-weight: bold;
-  align-items: flex-end;
-  padding: 0 0.5rem 0.5rem 0;
-  border-radius: 0px 15px 15px 0px;
+  padding: 45px 20px;
+  position: absolute;
+  right: 0;
 }
-.carde .price:hover {
-  cursor: pointer;
+.carde:hover h4, .carde:hover p {
+  width: 70%;
+}
+.carde:hover .selectChoice {
+  animation: check 1s;
+  animation-fill-mode: both;
+}
+.carde:hover .price {
+  animation: price 1s;
+  animation-fill-mode: both;
 }
 
+@keyframes check {
+  0% {
+    right: -50px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes price {
+  0% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: 50px;
+  }
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -580,20 +614,6 @@ body {
     opacity: 1;
   }
 }
-@keyframes apparition {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.plat {
-  font-weight: 900;
-}
-
 .commander {
   background-color: #F6F6F6;
   display: flex;
@@ -620,8 +640,16 @@ body {
   opacity: 0.7;
 }
 @media (min-width: 768px) {
-  .commander .main {
-    width: 768px;
+  .commander .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .commander .restoname {
+    font-family: "Shrikhand", sans-serif;
+    text-align: center;
+    font-size: 28px;
   }
   .commander .window {
     width: 100%;
@@ -634,30 +662,141 @@ body {
   }
 }
 
-.presentation .entree {
-  animation: fadeone 4s;
+@media (min-width: 768px) {
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+  }
+}
+.loader {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(252, 237, 237);
+  animation: loading 1s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  z-index: 10;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader .loadericon {
+  font-size: 30px;
+  color: #c84da5;
+  margin: 60px;
+  animation: icon 3s;
+  opacity: 0;
+  z-index: 6;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  border: solid 5px #f080d0;
+  border-radius: 50px;
+  padding: 20px;
+  z-index: 4;
+}
+.loader .brand {
+  position: relative;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 60px;
+  opacity: 0;
+  animation: effectload 3s ease-out;
+  text-shadow: 3px 3px 8px rgba(120, 44, 74, 0.604);
+}
+.loader .brand .o {
+  color: #FF79DA;
+  font-family: "Shrikhand", sans-serif;
+}
+.loader .brand .m {
+  color: #99E2D0;
+  font-family: "Shrikhand", sans-serif;
+}
+.loader .brand .f {
+  color: #9356DC;
+  font-family: "Shrikhand", sans-serif;
 }
 
-@keyframes fadeone {
+@keyframes loading {
   0% {
-    opacity: 0;
+    opacity: 1;
+    background-color: rgb(239, 237, 255);
+  }
+  50% {
+    background-color: rgb(239, 237, 254);
   }
   100% {
-    opacity: 1;
+    opacity: 0;
+    z-index: -1;
   }
 }
-.desserts {
-  animation: fadethree 4s;
+@keyframes icon {
+  0% {
+    opacity: 1;
+    top: -50px;
+    scale: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    scale: 1;
+  }
+  45% {
+    scale: 1;
+  }
+  50% {
+    opacity: 1;
+    scale: 1.5;
+    padding: 10px;
+    top: 100px;
+    rotate: 360deg;
+  }
+  65% {
+    top: 100px;
+    scale: 1;
+  }
+  75% {
+    top: -50px;
+    z-index: -1;
+  }
+  100% {
+    opacity: 0;
+    top: -50px;
+    z-index: -1;
+  }
 }
-
-@keyframes fadethree {
+@keyframes effectload {
   0% {
     opacity: 0;
+    scale: 1;
+    text-shadow: 3px 3px 8px rgba(120, 44, 74, 0.604);
+  }
+  15% {
+    opacity: 1;
   }
   40% {
-    opacity: 0;
+    text-shadow: 15px 15px 8px rgba(237, 173, 213, 0.777);
+  }
+  50% {
+    scale: 1.5;
+    rotate: 0deg;
+    text-shadow: 15px 15px 8px rgba(237, 173, 213, 0.777);
+  }
+  60% {
+    text-shadow: 3px 3px 8px rgba(120, 44, 74, 0.604);
+    opacity: 0.8;
   }
   100% {
-    opacity: 1;
+    scale: 0.8;
+    rotate: 360deg;
+    text-shadow: 3px 3px 8px rgba(120, 44, 74, 0.604);
+    opacity: 0;
   }
 }/*# sourceMappingURL=main.css.map */

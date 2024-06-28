@@ -3,28 +3,65 @@
 
     font-family: "Roboto", sans-serif;
     color: inherit;
+    
     text-decoration: none;}
-
-.header-resto{
-    position: static;
-    z-index: 3;
-    a{
-        position: absolute;
-        top: 35px;
-        left: 35px;
-    }
-    &__fa-solid, .fas {
-        font-size: 20px;
-        font-weight: 900;
-        }
-
+.main{
+    background-color: ($light-grey);
 }
 
+    .header-resto{
+        position: static;
+        z-index: 3;
+        a{
+            position: absolute;
+            top: 35px;
+            left: 35px;
+        }
+        &__fa-solid, .fas {
+            font-size: 20px;
+            font-weight: 900;
+            }
+    
+    }
+    
+    @keyframes apparition {
+        0% {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    //Apparition menus//
+    .entree, .plats, .desserts{
+        opacity: 0;
+        animation: apparition 1s;
+        animation-fill-mode: both;
+    }
+    
+    .entree{
+        animation-delay: 0.5s;
+    }
+    
+    .plats{
+        animation-delay: 1s;
+    }
+    
+    .desserts{
+        animation-delay: 1.5s;
+    }
+
 ///coeur à revoir///
+.heart {
+        font-size: 28px;
+        position: relative;
+        top: 30px;
+        padding-right:50px;
 
-.blackheart{
+        .blackheart{
 
-        font-size: 20px;
+        font-size: inherit;
         position: absolute;
         opacity: 1;
         border: none;
@@ -32,10 +69,12 @@
         transition: 1s;
         }
 
+
         .blackheart:focus{
             opacity: 0;
-         }
-.pinkheart {
+        }
+
+        .pinkheart {
 
         background:linear-gradient(180deg,($pink),($primairy-purple));
         background-clip: text;
@@ -43,16 +82,16 @@
         -webkit-text-fill-color: transparent;
         position: absolute;
         border: none;
-        font-size: 20px;
+        font-size: inherit;
         opacity: 0;
         transition: 1s;
         
-    }
- .pinkheart:focus{
+        }
+
+        .pinkheart:focus{
     opacity: 1;
- }
-
-
+        }
+    }
 ////coeur///
 
 .window{
@@ -75,6 +114,7 @@
 
     background-color: ($grey);
 }
+
         .presentation{
         padding:20px;
         z-index: 2;
@@ -85,26 +125,21 @@
         border: none;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-
         max-width: 1058px;
         margin: 0 auto;
-
         position: relative;
         top:-80px;
 
+         
         }
 
 
         .title {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-
+            justify-content: space-between;
         }
 
-
- 
 
         .restoname{
                         font-family:'Shrikhand',sans-serif;
@@ -114,7 +149,7 @@
 
 
 //***SOUS TITRE*****//
-  .categorie{
+.categorie{
     display: inline;
     font-weight: lighter;
     
@@ -141,12 +176,13 @@
 .carde{
     cursor: pointer;
     position: relative;
-    border-radius: 30px;
+    border-radius: 15px;
     display: flex;
     background-color: white;
     overflow: hidden;
-    margin: 20px;
+    margin: 20px 0;
     box-shadow: 5px 5px 3px #EAEAEA;
+
     &:hover .selectChoice{
         margin: 0;
         transition: all 0.5s;
@@ -156,6 +192,8 @@
         text-wrap: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .selectChoice {
         @include flex-center;
@@ -180,26 +218,31 @@
             cursor: pointer;
         }
     }
+
     .price {
         font-weight: bold;
         padding: 45px 20px;
         position: absolute;
         right: 0;
     }
+
     &:hover{
         h4, p {
             width: 70%;
         }
+
         .selectChoice{
             animation: check 1s;
             animation-fill-mode: both;
         }
+
         .price{
             animation: price 1s;
             animation-fill-mode: both;
         }
     }
 }
+
 
 @keyframes check {
     0%{
@@ -209,6 +252,7 @@
         right: 0;
     }
 }
+
 
 @keyframes price{
     0%{
@@ -230,38 +274,14 @@
     100% { transform: rotate(360deg); }
 }
 
+
 @keyframes effet-opacity {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
 // animation des menus
-@keyframes apparition {
-    0% {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
-.entree, .plates, .desserts{
-    opacity: 0;
-    animation: apparition 1s;
-    animation-fill-mode: both;
-}
-
-.entree{
-    animation-delay: 0.5s;
-}
-
-.plats{
-    animation-delay: 1s;
-}
-
-.desserts{
-    animation-delay: 1.5s;
-}
 
 
     .commander{
@@ -294,11 +314,22 @@
     }
 @media (min-width: 768px) {
 
-    .main{
-        width: 768px;
+
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:20px;
 
     }
 
+
+    .restoname{
+                    font-family:'Shrikhand',sans-serif;
+                    text-align: center;
+                    font-size: 28px;
+                }
 
     .window{
         width: 100%;
@@ -307,9 +338,7 @@
         
                 &__img{
 
-        
-                    width:100% ;
-               
+                    width:100% ;           
                     object-fit: cover;
         
                 }
@@ -319,3 +348,16 @@
 
 
 }
+
+
+@media (min-width: 768px){
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:25px;
+    }
+
+}
+
