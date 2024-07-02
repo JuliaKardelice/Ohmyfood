@@ -3,34 +3,78 @@
 
     font-family: "Roboto", sans-serif;
     color: inherit;
+    
     text-decoration: none;}
-
-.header-resto{
-    position: static;
-    z-index: 3;
-    a{
-        position: absolute;
-        top: 35px;
-        left: 35px;
-    }
-    &__fa-solid, .fas {
-        font-size: 20px;
-        font-weight: 900;
-        }
-
+.main{
+    background-color: ($light-grey);
 }
 
+    .header-resto{
+        position: static;
+        z-index: 3;
+        a{
+            position: absolute;
+            top: 35px;
+            left: 35px;
+        }
+        &__fa-solid, .fas {
+            font-size: 20px;
+            font-weight: 900;
+            }
+    
+    }
+    
+    @keyframes apparition {
+        0% {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    //Apparition menus//
+    .entree, .plats, .desserts{
+        opacity: 0;
+        animation: apparition 1s;
+        animation-fill-mode: both;
+    }
+    
+    .entree{
+        animation-delay: 0.5s;
+    }
+    
+    .plats{
+        animation-delay: 1s;
+    }
+    
+    .desserts{
+        animation-delay: 1.5s;
+    }
+
 ///coeur à revoir///
+.heart {
+        font-size: 28px;
+        position: relative;
+        top: 30px;
+        padding-right:50px;
 
-.blackheart{
+        .blackheart{
 
-        font-size: 20px;
+        font-size: inherit;
         position: absolute;
         opacity: 1;
         border: none;
         background-color: transparent;
+        transition: 1s;
         }
-.pinkheart {
+
+
+        .blackheart:focus{
+            opacity: 0;
+        }
+
+        .pinkheart {
 
         background:linear-gradient(180deg,($pink),($primairy-purple));
         background-clip: text;
@@ -38,26 +82,27 @@
         -webkit-text-fill-color: transparent;
         position: absolute;
         border: none;
-        font-size: 20px;
+        font-size: inherit;
         opacity: 0;
+        transition: 1s;
         
-    }
- .pinkheart:focus{
+        }
+
+        .pinkheart:focus{
     opacity: 1;
- }
-
-
+        }
+    }
 ////coeur///
 
 .window{
-width: 100%;
-
-        &__img{
-
-            height: auto;
-            object-fit: cover;
-
+    width: 100%;
+    img{
+        height: 280px;
+        object-fit: cover;
+        @media (min-width: 768px){
+            height: 380px;
         }
+    }
 }
 
 ///footer//
@@ -69,6 +114,7 @@ width: 100%;
 
     background-color: ($grey);
 }
+
         .presentation{
         padding:20px;
         z-index: 2;
@@ -79,26 +125,21 @@ width: 100%;
         border: none;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-
         max-width: 1058px;
         margin: 0 auto;
-
         position: relative;
         top:-80px;
 
+         
         }
 
 
         .title {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-
+            justify-content: space-between;
         }
 
-
- 
 
         .restoname{
                         font-family:'Shrikhand',sans-serif;
@@ -108,7 +149,7 @@ width: 100%;
 
 
 //***SOUS TITRE*****//
-  .categorie{
+.categorie{
     display: inline;
     font-weight: lighter;
     
@@ -133,68 +174,93 @@ width: 100%;
 /// 
 /// DESCRIPTION MENU///
 .carde{
-
-
-
-    background-color: white;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
     display: flex;
     background-color: white;
-    width: 100%;
     overflow: hidden;
-    margin: 20px;
+    margin: 20px 0;
     box-shadow: 5px 5px 3px #EAEAEA;
+
     &:hover .selectChoice{
         margin: 0;
         transition: all 0.5s;
         cursor: pointer;
     }
+    h4, p {
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     .selectChoice {
         @include flex-center;
-        background-color: $soft-green;
+        background-color: ($soft-green);
         color: white;
         font-weight: bold;
         font-size: 20px;
         align-items: center;
-        border-radius: 0px 15px 15px 0px;
         width: 50px;
-        margin-right: -60PX
+        position: absolute;
+        right: -50px;
+        height: 100%;
     }
     &:hover .selectChoice i {
         animation: spin 1s;
     }
 
     .description {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;              
-     
-        justify-content: space-between;
-      
+        flex: 1;
         padding: 0.5rem 0 0.5rem 1rem;
         &:hover {
             cursor: pointer;
-        
         }
     }
+
     .price {
-
-        display: flex;
-        align-items: center;
-        @include flex-center;
-        width: 30px;
         font-weight: bold;
-        align-items: flex-end;
-        padding: 0 0.5rem 0.5rem 0;
-        border-radius: 0px 15px 15px 0px;
-        &:hover {
-            cursor: pointer;
-        }
+        padding: 45px 20px;
+        position: absolute;
+        right: 0;
     }
 
+    &:hover{
+        h4, p {
+            width: 70%;
+        }
+
+        .selectChoice{
+            animation: check 1s;
+            animation-fill-mode: both;
+        }
+
+        .price{
+            animation: price 1s;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+
+@keyframes check {
+    0%{
+        right: -50px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+
+@keyframes price{
+    0%{
+        margin-right: 0px;
+    }
+    100%{
+        margin-right: 50px;
+    }
 }
 
 @mixin flex-center {
@@ -208,33 +274,13 @@ width: 100%;
     100% { transform: rotate(360deg); }
 }
 
+
 @keyframes effet-opacity {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
 // animation des menus
-@keyframes apparition {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-   
-
- 
-
-    ///Pourquoi pas appliqué si imbriqué ?///
-    .plat{
-    font-weight: 900;
-    }
 
 
 
@@ -268,11 +314,22 @@ width: 100%;
     }
 @media (min-width: 768px) {
 
-    .main{
-        width: 768px;
+
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:20px;
 
     }
 
+
+    .restoname{
+                    font-family:'Shrikhand',sans-serif;
+                    text-align: center;
+                    font-size: 28px;
+                }
 
     .window{
         width: 100%;
@@ -281,9 +338,7 @@ width: 100%;
         
                 &__img{
 
-        
-                    width:100% ;
-               
+                    width:100% ;           
                     object-fit: cover;
         
                 }
@@ -293,3 +348,16 @@ width: 100%;
 
 
 }
+
+
+@media (min-width: 768px){
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:25px;
+    }
+
+}
+
