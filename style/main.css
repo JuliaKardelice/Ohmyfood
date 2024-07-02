@@ -381,10 +381,6 @@ body {
   text-decoration: none;
 }
 
-.main {
-  background-color: #F6F6F6;
-}
-
 .header-resto {
   position: static;
   z-index: 3;
@@ -399,76 +395,36 @@ body {
   font-weight: 900;
 }
 
-@keyframes apparition {
-  0% {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.entree, .plats, .desserts {
-  opacity: 0;
-  animation: apparition 1s;
-  animation-fill-mode: both;
-}
-
-.entree {
-  animation-delay: 0.5s;
-}
-
-.plats {
-  animation-delay: 1s;
-}
-
-.desserts {
-  animation-delay: 1.5s;
-}
-
-.heart {
-  font-size: 28px;
-  position: relative;
-  top: 30px;
-  padding-right: 50px;
-}
-.heart .blackheart {
-  font-size: inherit;
+.blackheart {
+  font-size: 20px;
   position: absolute;
   opacity: 1;
   border: none;
   background-color: transparent;
-  transition: 1s;
 }
-.heart .blackheart:focus {
-  opacity: 0;
-}
-.heart .pinkheart {
+
+.pinkheart {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
   border: none;
-  font-size: inherit;
+  font-size: 20px;
   opacity: 0;
-  transition: 1s;
 }
-.heart .pinkheart:focus {
+
+.pinkheart:focus {
   opacity: 1;
 }
 
 .window {
   width: 100%;
 }
-.window img {
-  height: 280px;
+.window__img {
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media (min-width: 768px) {
-  .window img {
-    height: 380px;
-  }
 }
 
 .main {
@@ -495,7 +451,8 @@ body {
 .title {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .restoname {
@@ -520,26 +477,21 @@ body {
 }
 
 .carde {
-  cursor: pointer;
-  position: relative;
-  border-radius: 15px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
   display: flex;
   background-color: white;
+  width: 100%;
   overflow: hidden;
-  margin: 20px 0;
+  margin: 20px;
   box-shadow: 5px 5px 3px #EAEAEA;
 }
 .carde:hover .selectChoice {
   margin: 0;
   transition: all 0.5s;
   cursor: pointer;
-}
-.carde h4, .carde p {
-  text-wrap: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 .carde .selectChoice {
   display: flex;
@@ -549,55 +501,39 @@ body {
   font-weight: bold;
   font-size: 20px;
   align-items: center;
+  border-radius: 0px 15px 15px 0px;
   width: 50px;
-  position: absolute;
-  right: -50px;
-  height: 100%;
+  margin-right: -60PX;
 }
 .carde:hover .selectChoice i {
   animation: spin 1s;
 }
 .carde .description {
-  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
   padding: 0.5rem 0 0.5rem 1rem;
 }
 .carde .description:hover {
   cursor: pointer;
 }
 .carde .price {
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 30px;
   font-weight: bold;
-  padding: 45px 20px;
-  position: absolute;
-  right: 0;
+  align-items: flex-end;
+  padding: 0 0.5rem 0.5rem 0;
+  border-radius: 0px 15px 15px 0px;
 }
-.carde:hover h4, .carde:hover p {
-  width: 70%;
-}
-.carde:hover .selectChoice {
-  animation: check 1s;
-  animation-fill-mode: both;
-}
-.carde:hover .price {
-  animation: price 1s;
-  animation-fill-mode: both;
+.carde .price:hover {
+  cursor: pointer;
 }
 
-@keyframes check {
-  0% {
-    right: -50px;
-  }
-  100% {
-    right: 0;
-  }
-}
-@keyframes price {
-  0% {
-    margin-right: 0px;
-  }
-  100% {
-    margin-right: 50px;
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -614,6 +550,20 @@ body {
     opacity: 1;
   }
 }
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.plat {
+  font-weight: 900;
+}
+
 .commander {
   background-color: #F6F6F6;
   display: flex;
@@ -640,16 +590,8 @@ body {
   opacity: 0.7;
 }
 @media (min-width: 768px) {
-  .commander .title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-  }
-  .commander .restoname {
-    font-family: "Shrikhand", sans-serif;
-    text-align: center;
-    font-size: 28px;
+  .commander .main {
+    width: 768px;
   }
   .commander .window {
     width: 100%;
@@ -662,14 +604,6 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  .title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 25px;
-  }
-}
 .loader {
   position: fixed;
   top: 0;
