@@ -52,6 +52,7 @@ body{
     .liste{
         list-style-type: decimal;
         padding-left: 0px;
+        text-align: right;
         &__item::before{
             position: absolute;
             left: -15px;
@@ -65,15 +66,17 @@ body{
         } 
     
         &__item{
+            
             position: relative;
             list-style-type: none;
             counter-increment: nbr;
-         
+            
             &__button{
                 font-size: 18px;
                 background-color: #7b38d8;
                 border-radius: 10px;
                 border: solid;
+                
                    
             }
            
@@ -82,24 +85,34 @@ body{
         button{
             width: 100%;
             border: none;
-            border-radius: 30px;
+            border-radius: 25px;
             background-color: #F6F6F6;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             margin-bottom: 10px;
-            padding: 25px;
+            padding: 25px 25px 25px 40px;
+            gap:10px;
             font-size: 20px;
             transition:  1s;
             transition-property: calc(background-color);
-          
-                 
+            text-align: left;
+            .purple{
+                .fa-solid, .fas{
+                color:$primairy-purple;
+                }
+            }
+            i{
+            padding-right: 10px;
+            }
+    
         }
-                button:hover{
-                background-color: #9256dc5f}
-
-
+        button:hover{
+        background-color: #9256dc5f}
+    
         
     }
 }
+
+
 
 
 /*RESTAURANT*/
@@ -116,7 +129,6 @@ body{
 }
 
 .new{
-  
     color:($green);
     background-color: ($soft-green);
     padding : 2px 5px 2px 5px;
@@ -159,27 +171,20 @@ body{
 
                     &__h3{
                         font-weight: 800;
-                        }
-                    
+                        }           
             }
-        
-
            &__icon{
-
             font-size: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            
            }
        
 
-// utiliser webkit background et webkit text fill background:linear-gradient(180deg,($pink),($primairy-purple));///
+
 }
 
 .blackheart{
-
-
     font-size: 20px;
     position: absolute;
     opacity: 1;
@@ -225,8 +230,6 @@ opacity: 1;
             font-size: 23px;
         
         }
-
-
         .liste{
             padding-left: 0px;
             display: flex;
@@ -251,8 +254,7 @@ opacity: 1;
             
                   
 
-            button{
-                
+            button{   
                 width: 100%;
                 border: none;
                 border-radius: 30px;
@@ -262,8 +264,6 @@ opacity: 1;
                 padding: 25px;
                 font-size: 20px;
                     }
-         
-
             }
         }
     
@@ -274,24 +274,16 @@ opacity: 1;
     .restaurants{
         padding:50px;
         background-color: ($light-grey);
-  
-        
-       
         &__titre{
         text-align: left;
         display: flex;
         justify-content: left;
         }
         &__cartes{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-      
-        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 60px;
-       
-        padding-bottom: 30px;
-  
-                
+        padding-bottom: 30px;                
         }
     }    
 }

@@ -184,6 +184,7 @@ body {
 .fonctionnement .liste {
   list-style-type: decimal;
   padding-left: 0px;
+  text-align: right;
 }
 .fonctionnement .liste__item::before {
   position: absolute;
@@ -209,14 +210,22 @@ body {
 .fonctionnement .liste button {
   width: 100%;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   background-color: #F6F6F6;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom: 10px;
-  padding: 25px;
+  padding: 25px 25px 25px 40px;
+  gap: 10px;
   font-size: 20px;
   transition: 1s;
   transition-property: calc(background-color);
+  text-align: left;
+}
+.fonctionnement .liste button .purple .fa-solid, .fonctionnement .liste button .purple .fas {
+  color: #9356DC;
+}
+.fonctionnement .liste button i {
+  padding-right: 10px;
 }
 .fonctionnement .liste button:hover {
   background-color: rgba(146, 86, 220, 0.3725490196);
@@ -376,6 +385,7 @@ body {
 
 .main {
   background-color: #F6F6F6;
+  width: 100%;
 }
 
 .header-resto {
@@ -608,6 +618,8 @@ body {
   }
 }
 .commander {
+  margin: 0;
+  width: 100%;
   background-color: #F6F6F6;
   display: flex;
   justify-content: center;
@@ -632,28 +644,6 @@ body {
   filter: brightness(50% M);
   opacity: 0.7;
 }
-@media (min-width: 768px) {
-  .commander .title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-  }
-  .commander .restoname {
-    font-family: "Shrikhand", sans-serif;
-    text-align: center;
-    font-size: 28px;
-  }
-  .commander .window {
-    width: 100%;
-    height: 383px;
-  }
-  .commander .window__img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
 
 @media (min-width: 768px) {
   .title {
@@ -661,6 +651,20 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 25px;
+  }
+  .restoname {
+    font-family: "Shrikhand", sans-serif;
+    text-align: center;
+    font-size: 28px;
+  }
+  .window {
+    width: 100%;
+    height: 383px;
+  }
+  .window__img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .loader {
